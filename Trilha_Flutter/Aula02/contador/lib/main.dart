@@ -66,8 +66,21 @@ class _MyPageState extends State<MyPage> {
                   if (contadorButao == 0) {
                     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                         content: Text('Impossível subtrair contagem de zero')));
+                  } else {
+                    contadorButao--;
                   }
-                  contadorButao--;
+                });
+              },
+              style: ButtonStyle(
+                backgroundColor:
+                    MaterialStateProperty.all<Color>(Colors.cyan[200]),
+              ),
+            ),
+            ElevatedButton(
+              child: Text('Resetar'),
+              onPressed: () {
+                setState(() {
+                  contadorButao = 0;
                 });
               },
               style: ButtonStyle(

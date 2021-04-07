@@ -63,6 +63,10 @@ class _MyPageState extends State<MyPage> {
               onPressed: () {
                 print('Todo');
                 setState(() {
+                  if (contadorButao == 0) {
+                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                        content: Text('Impossível subtrair contagem de zero')));
+                  }
                   contadorButao--;
                 });
               },

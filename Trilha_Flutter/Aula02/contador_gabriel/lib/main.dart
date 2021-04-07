@@ -47,7 +47,7 @@ class _MyPageState extends State<MyPage> {
             Text(
               '$contadorButao',
               style: TextStyle(
-                fontSize: 30.0,
+                fontSize: 35.0,
               ),
             ),
             ElevatedButton(
